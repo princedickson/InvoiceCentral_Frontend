@@ -1,0 +1,31 @@
+.Login_Form{
+    margin-top: 50px;
+}
+.card {
+    border-radius: 10px;
+}
+.card-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+.btn-primary {
+    background-color: #003b7a;
+    border-color: #003b7a;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  
+  
+  /* Add hover effect to the button */
+.btn-primary:hover {
+    background-color: #003b7a;
+    border-color: #003b7a;
+}

@@ -1,0 +1,53 @@
+<div class="Login_Form">
+  <div class=" row justify-content-center">
+    <div class="col-md-6">
+      <div class = "card sha">
+        <div class="card-header bg-primary text-center">
+          <h4>Login</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input 
+              type="email" 
+              id="email" 
+              class="form-control" 
+              formControlName="email" 
+              placeholder="enter your email"
+              />
+              <div *ngIf=" loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-danger">
+                valid email is required.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input 
+              type="password" 
+              id="password" 
+              class="form-control" 
+              formControlName="password" 
+              placeholder="enter your password"
+              />
+              <div *ngIf=" loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-danger">
+                valid password is required.
+              </div>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn-primary" [disabled]="loginForm.invalid">
+                Login
+              </button>
+            </div>
+            <div class="text-center">
+              <a routerLink="/register" class="text-primary text-decoration-none">Create Account</a> |...
+              <a routerLink="/forgot-password" class="text-primary text-decoration-none"> Forgot Password?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
